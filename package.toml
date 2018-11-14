@@ -9,10 +9,10 @@ tags = [
   "wren"
 ]
 
-[[bugs]]
+[bugs]
   url = "https://github.com/datatypevoid/wren-enum/issues"
 
-[[author]]
+[author]
   name = "David Newman"
   url = "https://github.com/datatypevoid"
   email = "david@nici.solutions"
