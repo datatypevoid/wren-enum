@@ -2,7 +2,7 @@
  * Imports
  */
 
-import "../wren_modules/wren-test/dist/module" for Expect, Suite, ConsoleReporter
+import "../wren_modules/wren-test/dist/module" for Expect, Suite
 import "../src/validate" for ValidateMap
 
 
@@ -10,7 +10,7 @@ import "../src/validate" for ValidateMap
  * Structures
  */
 
-var Test = Suite.new("ValidateMap") { |it|
+var ValidateMapTest = Suite.new("ValidateMap") { |it|
 
 
   it.suite("ValidateMap (values)") { |it|
@@ -144,5 +144,3 @@ var Test = Suite.new("ValidateMap") { |it|
 
 
 }
-
-Test.run(ConsoleReporter.new())

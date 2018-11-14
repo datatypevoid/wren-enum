@@ -3,14 +3,14 @@
  */
 
 import "../src/enumMember" for EnumMember
-import "../wren_modules/wren-test/dist/module" for Expect, Suite, ConsoleReporter
+import "../wren_modules/wren-test/dist/module" for Expect, Suite
 
 
 /*
  * Structures
  */
 
-var Test = Suite.new("EnumMember") { |it|
+var EnumMemberTest = Suite.new("EnumMember") { |it|
 
 
   it.suite("construct new (key, name, value, type)") { |it|
@@ -329,6 +329,3 @@ var Test = Suite.new("EnumMember") { |it|
 
 
 }
-
-
-Test.run(ConsoleReporter.new())

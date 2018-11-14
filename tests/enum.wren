@@ -3,7 +3,7 @@
  */
 
 import "../src/factory" for EnumFactory
-import "../wren_modules/wren-test/dist/module" for Expect, Suite, ConsoleReporter, Stub
+import "../wren_modules/wren-test/dist/module" for Expect, Suite, Stub
 
 
 /*
@@ -30,7 +30,7 @@ var GetMapFnStub = Fn.new { |ret|
 var Enum = EnumFactory.create(MockEnumMember, GetValidateStub.call(), Stub.new("TransformList"), GetMapFnStub.call({}))
 
 
-var Test = Suite.new("Enum") { |it|
+var EnumTest = Suite.new("Enum") { |it|
 
 
   it.suite("construct new (name, values, memberClass, validatorFn)") { |it|
@@ -359,6 +359,3 @@ var Test = Suite.new("Enum") { |it|
 
 
 }
-
-
-Test.run(ConsoleReporter.new())
