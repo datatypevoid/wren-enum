@@ -1,0 +1,24 @@
+name = "wren-enum"
+version = "0.0.0"
+description = "Enumerated Types for Wren."
+homepage = "https://github.com/datatypevoid/wren-enum"
+license = "ISC"
+main = "src/module.wren"
+tags = [
+  "enum",
+  "wren"
+]
+
+[[bugs]]
+  url = "https://github.com/datatypevoid/wren-enum/issues"
+
+[[author]]
+  name = "David Newman"
+  url = "https://github.com/datatypevoid"
+  email = "david@nici.solutions"
+
+[[dependencies]]
+  name = "wren-test"
+  git = "https://github.com/datatypevoid/wren-test"
+  group = "test"
+  version = "master"
