@@ -62,11 +62,9 @@ var City = Enum.new("City", {
 // Output: `<enum 'City'>`
 System.print(City.toString())
 
-// Test 1
 // Output: `<City.Portland: 0>`
 System.print(City["Portland"].toString())
 
-// Test 2
 // Output: `Portland`
 System.print(City["Portland"].name)
 
