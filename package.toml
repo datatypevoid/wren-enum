@@ -1,5 +1,5 @@
 name = "wren-enum"
-version = "0.0.1-1"
+version = "0.0.1-2"
 description = "Enumerated Types for Wren."
 homepage = "https://github.com/datatypevoid/wren-enum"
 license = "ISC"
