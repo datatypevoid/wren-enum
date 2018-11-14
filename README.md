@@ -62,11 +62,9 @@ var City = Enum.new("City", {
 // Output: `<enum 'City'>`
 System.print(City.toString())
 
-// Test 1
 // Output: `<City.Portland: 0>`
 System.print(City["Portland"].toString())
 
-// Test 2
 // Output: `Portland`
 System.print(City["Portland"].name)
 
@@ -155,6 +153,13 @@ Test scripts utilize the [wren-test](https://github.com/gsmaverick/wren-test) fr
 
 ```bash
 $ wren ./tests/module.wren
+```
+
+Note that you must have the [wren-test](https://github.com/gsmaverick/wren-test) framework installed for the tests to run. The fastest way to do this is to build [wrenpm](https://github.com/brandly/wrenpm) and do:
+
+```bash
+# from within the root directory of this project:
+$ wrenpm install
 ```
 
 
