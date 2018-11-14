@@ -149,6 +149,25 @@ System.print(Alias["Peter Parker"] == Alias["Spiderman"])
 - *git* - Get `git` [from here](http://git-scm.com/download/mac).
 
 
+### Testing
+
+Test scripts utilize the [wren-test](https://github.com/gsmaverick/wren-test) framework and are stored in the `tests/` [directory](https://github.com/datatypevoid/wren-enum/tree/develop/tests). You can launch the tests with:
+
+```bash
+$ wren ./tests/module.wren
+```
+
+
+### Examples
+
+Examples live in the `examples/` [directory](https://github.com/datatypevoid/wren-enum/tree/develop/examples). You can run an example with:
+
+```bash
+# `file` is the filename of the example you'd like to run.
+$ wren ./tests/file.wren
+```
+
+
 ## Wren
 
 ### Use a Wren-aware editor
