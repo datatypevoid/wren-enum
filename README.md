@@ -172,7 +172,7 @@ See also the list of [contributors](https://github.com/datatypevoid/wren-enum/bl
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE.md](https://github.com/datatypevoid/wren-enum/blob/develop/LICENSE.md) file for details
+This project is licensed under the ISC License - see the [LICENSE](https://github.com/datatypevoid/wren-enum/blob/develop/LICENSE) file for details
 
 
 ## Acknowledgments
