@@ -155,6 +155,13 @@ Test scripts utilize the [wren-test](https://github.com/gsmaverick/wren-test) fr
 $ wren ./tests/module.wren
 ```
 
+Note that you must have the [wren-test](https://github.com/gsmaverick/wren-test) framework installed for the tests to run. The fastest way to do this is to build [wrenpm](https://github.com/brandly/wrenpm) and do:
+
+```bash
+# from within the root directory of this project:
+$ wrenpm install
+```
+
 
 ### Examples
 
