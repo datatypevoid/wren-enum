@@ -63,7 +63,6 @@ class EnumFactory {
    * @return {Enum} The constructed `Enum` instance.
    */
   new (name, values) {
-    System.print("DEBUG: %(values)") // TODO: Determine why uncommenting this breaks `Enum` construction.
     return Enum.new(name, values, _type, _validatorFn, _transformFn, _mapFn)
   }
 
