@@ -63,6 +63,21 @@ class Enum {
 
 
   /**
+   * Checks if there is a member associated with the given index.
+   * Throws an error if the index is not a `Num` or `String`.
+   * @param  {Num|String} index
+   * @return {Boolean} Returns `true` if a member was found; `false` otherwise.
+   */
+  has (index) {
+
+    if (index is Num || index is String) return _enums[index] != null
+
+    Fiber.abort("Expected 'String' or 'Num' for 'index' parameter.")
+
+  }
+
+
+  /**
    * Returns a `String` representation of an `Enum` instance.
    * @return {String}
    */

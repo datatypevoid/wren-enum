@@ -157,6 +157,91 @@ var EnumTest = Suite.new("Enum") { |it|
   }
 
 
+  it.suite("has (index)") { |it|
+
+    var validateStub = GetValidateStub.call()
+
+    var mapStub = GetMapFnStub.call({
+      "Portland": {},
+      "Denver": {},
+      "Los Angeles": {},
+      0: {},
+      1: {},
+      2: {}
+    })
+
+    var transformStub = Stub.new("TransformList")
+
+    // Enum with mocked dependencies.
+    var enum = EnumFactory.create(MockEnumMember, validateStub, transformStub, mapStub)
+
+    var city
+
+    it.beforeEach {
+
+      city = enum.new("City", {
+        "Portland": 0,
+        "Denver": 1,
+        "Los Angeles": 2
+      })
+
+    }
+
+
+    it.should("return a Bool value of 'true' if there is a member associated with an index.") {
+
+      var hasMember = city.has("Portland")
+
+      Expect.call(hasMember).toBe(Bool)
+      Expect.call(hasMember).toBeTrue
+
+      hasMember = city.has(1)
+
+      Expect.call(hasMember).toBe(Bool)
+      Expect.call(hasMember).toBeTrue
+
+    }
+
+
+    it.should("return a Bool value of 'false' if there is a member associated with an index.") {
+
+      var hasMember = city.has("New York")
+
+      Expect.call(hasMember).toBe(Bool)
+      Expect.call(hasMember).toBeFalse
+
+      hasMember = city.has(42)
+
+      Expect.call(hasMember).toBe(Bool)
+      Expect.call(hasMember).toBeFalse
+
+    }
+
+
+    it.should("throw an error if the given index is not a 'String' or 'Num'.") {
+
+      var testFn = Fn.new { |input|
+
+        Expect.call(
+          Fiber.new {
+            var hasMember = city.has(input)
+          }
+        ).toBeARuntimeError("Expected 'String' or 'Num' for 'index' parameter.")
+
+      }
+
+      testFn.call({})
+
+      testFn.call([])
+
+      testFn.call(null)
+
+    }
+
+
+  }
+
+
   it.suite("toString ()") { |it|
 
 
