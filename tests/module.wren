@@ -5,6 +5,7 @@
 import "../wren_modules/wren-test/dist/module" for ConsoleReporter
 import "./enum" for EnumTest
 import "./enumMember" for EnumMemberTest
+import "./transform" for TransformListTest
 import "./validate" for ValidateMapTest
 
 
@@ -16,6 +17,7 @@ import "./validate" for ValidateMapTest
 var tests = [
   EnumTest,
   EnumMemberTest,
+  TransformListTest,
   ValidateMapTest
 ]
 
